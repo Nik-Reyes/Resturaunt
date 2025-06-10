@@ -1,3 +1,7 @@
+# Basic setup for a Webpack project
+
+##### For complete details and additional setup, see the [docs](https://webpack.js.org/concepts/)
+
 ### Folder Setup
 
 1. Create new repo on GitHub
