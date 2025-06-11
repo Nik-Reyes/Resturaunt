@@ -7,20 +7,41 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
+      <nav class="nav" aria-label="Main Navigation Tabs">
+        <ul class="menu-buttons">
           <li class="list-item">
-            <button class="nav-button"><span>Home</span></button>
+            <button
+              class="nav-button"
+              aria-pressed="true"
+              aria-controls="content"
+              data-tab="home"
+            >
+              <span>Home</span>
+            </button>
           </li>
           <li class="list-item">
-            <button class="nav-button"><span>Menu</span></button>
+            <button
+              class="nav-button"
+              aria-pressed="false"
+              aria-controls="content"
+              data-tab="Menu"
+            >
+              <span>Menu</span>
+            </button>
           </li>
           <li class="list-item">
-            <button class="nav-button"><span>About</span></button>
+            <button
+              class="nav-button"
+              aria-pressed="false"
+              aria-controls="content"
+              data-tab="About"
+            >
+              <span>About</span>
+            </button>
           </li>
         </ul>
       </nav>
     </header>
-    <div class="content"></div>
+    <div class="content" role="tabpanel" aria-live="polite"></div>
   </body>
 </html>
