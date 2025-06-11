@@ -42,26 +42,27 @@ button {
 .nav-button::before,
 .nav-button::after {
   content: "";
-  transform: scaleX(0);
-  position: absolute;
-  left: 0;
+  transform-origin: center;
   height: 1px;
-  width: 100%;
   background-color: #fff;
   transition: transform 250ms ease-in-out;
+  display: block;
 }
 
 .nav-button::before {
-  top: 0;
+  transform: scaleX(0) translateY(0);
 }
 
 .nav-button::after {
-  bottom: 0;
+  transform: scaleX(0) translateY(100%);
 }
 
-.nav-button:hover::after,
+.nav-button:hover::after {
+  transform: scaleX(1) translateY(100%);
+}
+
 .nav-button:hover::before {
-  transform: scaleX(1);
+  transform: scaleX(1) translateY(0);
 }
 
 .nav ::marker {
