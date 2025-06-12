@@ -18,8 +18,8 @@ button {
 }
 
 .nav {
-  --button-padding-tb: 0.5rem;
-  --button-padding-lr: 1rem;
+  --button-padding-tb: 2rem;
+  --button-padding-lr: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,13 +38,12 @@ button {
 }
 
 .website-title:first-child {
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 
 .menu-buttons {
   display: flex;
   justify-content: flex-end;
-  /* gap: 2rem; */
   font-size: 1.2rem;
 }
 

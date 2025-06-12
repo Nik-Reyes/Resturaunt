@@ -9,7 +9,6 @@ export function createSpecials(images) {
   const specialsList = [];
 
   for (const [key, value] of Object.entries(images)) {
-    console.log(`key: ${key}\nvalue: ${value}`);
     if (key !== "mapNames") {
       const special = utils.generateElement("div", "special");
       const image = utils.generateElement("img", "pie-img", value);

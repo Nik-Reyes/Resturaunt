@@ -2,7 +2,7 @@
   display: grid;
   gap: 2rem;
   max-width: 75rem;
-  padding: 1rem 1rem;
+  padding: 1rem 1.5rem;
   margin: 0 auto;
 }
 
@@ -15,13 +15,13 @@ img {
 }
 
 .monthly-title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   text-align: center;
 }
 
 .specials {
   display: grid;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .special {

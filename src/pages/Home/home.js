@@ -1,10 +1,12 @@
 import { createSpecials } from "../../components/Specials/special.js";
+import { menu } from "../../components/Menu/menu.js";
 import strawRhubarb from "../../assets/images/strawRhubarb.jpg";
 import scac from "../../assets/images/saltedCaramelAppleCrumble.jpg";
 import keyLime from "../../assets/images/keyLime.jpg";
 
 export default function () {
-  //each special will have a unique image and name, and number to create
+  const content = document.querySelector(".content");
+
   const images = {
     strawRhubarb,
     scac,
@@ -16,6 +18,7 @@ export default function () {
     },
   };
   const monthlySpecials = createSpecials(images);
-  const content = document.querySelector(".content");
-  content.append(monthlySpecials);
+  const regMenu = menu();
+
+  content.append(monthlySpecials, regMenu);
 }
