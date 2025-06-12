@@ -1,18 +1,11 @@
 import { utils } from "../../utils/Helpers/helpers";
-import { createMenuItem } from "../MenuItem/item";
-import "./menu.css";
+import { createMenuItem } from "./MenuItem/createMenuItem";
+import { createMenuTitle } from "./MenuTitle/menuTitle";
 
-export function menu() {
-  const menuWrapper = utils.generateElement("div", "menu-wrapper");
-  const menuItemWrapper = utils.generateElement("div", "menu-items-wrapper");
-  const menuTitle = utils.generateElement("div", "menu-title");
-  const titleText = utils.generateElement("h2", "title-text", "All Pies");
-  const subtitle = utils.generateElement(
-    "p",
-    "subtitle",
-    "Pie by the slice: $5"
-  );
+export function createRegMenu() {
   const menuList = [];
+  const menuItemWrapper = utils.generateElement("div", "menu-items-wrapper");
+  const menuWrapper = utils.generateElement("div", "menu-wrapper");
   const menuItems = {
     lemonMeringue: createMenuItem(
       "Lemon Meringue",
@@ -80,8 +73,9 @@ export function menu() {
     menuList.push(value);
   }
 
-  menuTitle.append(titleText, subtitle);
   menuItemWrapper.append(...menuList);
+  const menuTitle = createMenuTitle();
+
   menuWrapper.append(menuTitle, menuItemWrapper);
   return menuWrapper;
 }

@@ -1,5 +1,4 @@
-import { utils } from "../../utils/Helpers/helpers";
-
+import { utils } from "../../../utils/Helpers/helpers";
 export function createMenuItem(title, price, description) {
   const itemContainer = utils.generateElement("div", "menu-item");
   const titleWrapper = utils.generateElement("div", "title-wrapper");
