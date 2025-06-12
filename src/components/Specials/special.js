@@ -16,7 +16,7 @@ export function createSpecials(images) {
       const textWrapper = utils.generateElement("div", "text-wrapper");
       const descriptionText = utils.generateElement(
         "p",
-        "description-text",
+        "special-text",
         images.mapNames[key]
       );
       specialTitle.appendChild(title);

@@ -49,7 +49,7 @@ img {
   overflow: hidden;
 }
 
-.description-text {
+.special-text {
   padding: 2em 1em;
   font-size: clamp(1rem, 0.6279rem + 1.8605vw, 1.5rem);
 }
