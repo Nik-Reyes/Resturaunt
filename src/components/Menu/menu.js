@@ -4,6 +4,7 @@ import "./menu.css";
 
 export function menu() {
   const menuWrapper = utils.generateElement("div", "menu-wrapper");
+  const menuItemWrapper = utils.generateElement("div", "menu-items-wrapper");
   const menuTitle = utils.generateElement("div", "menu-title");
   const titleText = utils.generateElement("h2", "title-text", "All Pies");
   const menuList = [];
@@ -75,6 +76,7 @@ export function menu() {
   }
 
   menuTitle.appendChild(titleText);
-  menuWrapper.append(menuTitle, ...menuList);
+  menuItemWrapper.append(...menuList);
+  menuWrapper.append(menuTitle, menuItemWrapper);
   return menuWrapper;
 }

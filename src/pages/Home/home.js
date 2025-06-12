@@ -1,5 +1,6 @@
 import { createSpecials } from "../../components/Specials/special.js";
 import { menu } from "../../components/Menu/menu.js";
+import "./home.css";
 import strawRhubarb from "../../assets/images/strawRhubarb.jpg";
 import scac from "../../assets/images/saltedCaramelAppleCrumble.jpg";
 import keyLime from "../../assets/images/keyLime.jpg";
