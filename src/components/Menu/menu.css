@@ -3,7 +3,8 @@
   gap: 2.5rem;
 }
 
-.title-text {
+.title-text,
+.subtitle {
   text-align: center;
 }
 
@@ -31,11 +32,16 @@
   font-weight: 500;
 }
 
-.item-text {
+.item-text,
+.subtitle {
   text-align: center;
-  font-weight: 300;
+  font-weight: 200;
   color: hsl(0, 0%, 20%);
   font-size: 0.875rem;
+}
+
+.subtitle {
+  font-size: 0.725rem;
 }
 
 @media only screen and (min-width: 46.875rem) {

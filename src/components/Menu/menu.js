@@ -7,6 +7,11 @@ export function menu() {
   const menuItemWrapper = utils.generateElement("div", "menu-items-wrapper");
   const menuTitle = utils.generateElement("div", "menu-title");
   const titleText = utils.generateElement("h2", "title-text", "All Pies");
+  const subtitle = utils.generateElement(
+    "p",
+    "subtitle",
+    "Pie by the slice: $5"
+  );
   const menuList = [];
   const menuItems = {
     lemonMeringue: createMenuItem(
@@ -75,7 +80,7 @@ export function menu() {
     menuList.push(value);
   }
 
-  menuTitle.appendChild(titleText);
+  menuTitle.append(titleText, subtitle);
   menuItemWrapper.append(...menuList);
   menuWrapper.append(menuTitle, menuItemWrapper);
   return menuWrapper;
