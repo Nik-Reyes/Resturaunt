@@ -13,7 +13,7 @@ body {
 
 button {
   font-family: inherit;
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 0.5em 1em;
 }
 
@@ -44,7 +44,7 @@ button {
 .menu-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
+  /* gap: 2rem; */
   font-size: 1.2rem;
 }
 
@@ -55,8 +55,8 @@ button {
   cursor: pointer;
 }
 
-.nav-button::before,
-.nav-button::after {
+.list-item::before,
+.list-item::after {
   content: "";
   transform-origin: center;
   height: 1px;
@@ -65,21 +65,21 @@ button {
   background-color: black;
 }
 
-.nav-button::before {
+.list-item::before {
   transform: scaleX(0) translateY(0);
 }
 
-.nav-button::after {
+.list-item::after {
   transform: scaleX(0) translateY(100%);
 }
 
-.nav-button:hover::after,
-.nav-button:focus::after {
+.list-item:has(.nav-button:hover)::after,
+.list-item:has(.nav-button:focus)::after {
   transform: scaleX(1) translateY(100%);
 }
 
-.nav-button:hover::before,
-.nav-button:focus::before {
+.list-item:has(.nav-button:hover)::before,
+.list-item:has(.nav-button:focus)::before {
   transform: scaleX(1) translateY(0);
 }
 
