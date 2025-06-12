@@ -13,12 +13,12 @@ body {
 
 button {
   font-family: inherit;
+  font-size: 0.875rem;
   padding: 0.5em 1em;
 }
 
 .nav {
   background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 0%, 0%));
-  padding: 0.5rem 2rem 0.5rem 2rem;
   --button-padding-tb: 0.5em;
   --button-padding-lr: 1em;
 }
