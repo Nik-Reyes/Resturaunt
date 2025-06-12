@@ -4,6 +4,8 @@ import "./menu.css";
 
 export function menu() {
   const menuWrapper = utils.generateElement("div", "menu-wrapper");
+  const menuTitle = utils.generateElement("div", "menu-title");
+  const titleText = utils.generateElement("h2", "title-text", "All Pies");
   const menuList = [];
   const menuItems = {
     lemonMeringue: createMenuItem(
@@ -71,6 +73,8 @@ export function menu() {
   for (let value of Object.values(menuItems)) {
     menuList.push(value);
   }
-  menuWrapper.append(...menuList);
+
+  menuTitle.appendChild(titleText);
+  menuWrapper.append(menuTitle, ...menuList);
   return menuWrapper;
 }
