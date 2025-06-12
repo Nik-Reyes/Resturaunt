@@ -1,0 +1,72 @@
+.specials-wrapper {
+  display: grid;
+  gap: 2rem;
+  max-width: 75rem;
+  padding: 1rem 2rem;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.monthly-title {
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.specials {
+  display: grid;
+  gap: 1rem;
+}
+
+.special {
+  display: grid;
+  cursor: pointer;
+}
+
+.special > * {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+.img-description {
+  align-self: self-end;
+  text-align: center;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  backdrop-filter: blur(1px);
+  color: #efefef;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms ease-in-out;
+}
+
+.text-wrapper {
+  overflow: hidden;
+}
+
+.description-text {
+  padding: 2em 1em;
+  font-size: clamp(1rem, 0.6279rem + 1.8605vw, 1.5rem);
+}
+
+.special:hover .img-description {
+  grid-template-rows: 1fr;
+}
+
+@media only screen and (min-width: 46.875rem) {
+  .specials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  img {
+    aspect-ratio: 0.75;
+  }
+
+  .description-text {
+    font-size: clamp(1rem, 0.1667rem + 1.7778vw, 1.5rem);
+  }
+}
