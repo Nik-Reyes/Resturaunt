@@ -18,23 +18,39 @@ button {
 }
 
 .nav {
-  background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 0%, 0%));
-  --button-padding-tb: 0.5em;
-  --button-padding-lr: 1em;
+  --button-padding-tb: 0.5rem;
+  --button-padding-lr: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--button-padding-tb) var(--button-padding-lr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.website-title-wrapper {
+  display: grid;
+  align-items: center;
+}
+
+.website-title {
+  text-align: center;
+}
+
+.website-title:first-child {
+  font-size: 2rem;
 }
 
 .menu-buttons {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   gap: 2rem;
-  padding: var(--button-padding-tb) var(--button-padding-lr);
   font-size: 1.2rem;
 }
 
 .nav-button {
   background-color: transparent;
   border: none;
-  color: white;
   position: relative;
   cursor: pointer;
 }
@@ -44,9 +60,9 @@ button {
   content: "";
   transform-origin: center;
   height: 1px;
-  background-color: #fff;
   transition: transform 250ms ease-in-out;
   display: block;
+  background-color: black;
 }
 
 .nav-button::before {
@@ -57,11 +73,13 @@ button {
   transform: scaleX(0) translateY(100%);
 }
 
-.nav-button:hover::after {
+.nav-button:hover::after,
+.nav-button:focus::after {
   transform: scaleX(1) translateY(100%);
 }
 
-.nav-button:hover::before {
+.nav-button:hover::before,
+.nav-button:focus::before {
   transform: scaleX(1) translateY(0);
 }
 
