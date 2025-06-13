@@ -5,13 +5,30 @@ import "./hero.css";
 export function heroSection() {
   const heroWrapper = utils.generateElement("div", "hero-wrapper");
   const heroImageWrapper = utils.generateElement("div", "hero-img-wrapper");
+  const heroSpecialAd = utils.generateElement("div", "special-advertisement");
+  const specialAdTitle = utils.generateElement(
+    "p",
+    "ad-title",
+    "New Summer Flavors"
+  );
+  const specialAdsubtitle = utils.generateElement(
+    "p",
+    "ad-subtitle",
+    "Summer is here, and with it, limited edition pies!"
+  );
+  const specialAdBtn = utils.generateElement("button", "ad-button");
+  const specialAdBtnTxt = utils.generateElement(
+    "span",
+    "ad-btn-text",
+    "See Specials "
+  );
   const heroImage = utils.generateElement("img", "hero-img", heroImg);
-  const heroTextOuter = utils.generateElement("div", "hero-text-outer");
-  const heroTextInner = utils.generateElement("div", "hero-text-inner");
+  const shortStoryOuter = utils.generateElement("div", "short-story-outer");
+  const shortStoryInner = utils.generateElement("div", "short-story-inner");
   const heroTitle = utils.generateElement(
     "p",
     "hero-title",
-    "Baking Smiles since 1957, where every day is pie day"
+    "Baking Smiles since 1957"
   );
   const heroSubtitle = utils.generateElement(
     "p",
@@ -23,15 +40,17 @@ export function heroSection() {
   const storyButtonText = utils.generateElement(
     "span",
     "story-button-text",
-    "Our Story"
+    "Read More"
   );
 
-  heroTextInner.append(heroTitle, heroSubtitle);
+  specialAdBtn.appendChild(specialAdBtnTxt);
+  heroSpecialAd.append(specialAdTitle, specialAdsubtitle, specialAdBtn);
+  shortStoryInner.append(heroTitle, heroSubtitle, buttonWrapper);
   storyButton.appendChild(storyButtonText);
   buttonWrapper.appendChild(storyButton);
-  heroTextOuter.append(heroTextInner, buttonWrapper);
-  heroImageWrapper.appendChild(heroImage);
-  heroWrapper.append(heroImageWrapper, heroTextOuter);
+  shortStoryOuter.appendChild(shortStoryInner);
+  heroImageWrapper.append(heroSpecialAd, heroImage);
+  heroWrapper.append(heroImageWrapper, shortStoryOuter);
 
   return heroWrapper;
 }
