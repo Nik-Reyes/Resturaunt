@@ -86,3 +86,8 @@ button {
 .nav ::marker {
   color: transparent;
 }
+
+.content {
+  display: grid;
+  gap: 4rem;
+}
