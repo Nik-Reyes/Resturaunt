@@ -8,6 +8,7 @@
   display: grid;
   position: relative;
   overflow: hidden;
+  aspect-ratio: 1.5;
 }
 
 .hero-img-wrapper > * {
@@ -129,6 +130,7 @@
 
   .hero-img-wrapper {
     background-color: #a25452;
+    aspect-ratio: initial;
   }
 
   .hero-img {
