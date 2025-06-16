@@ -1,6 +1,6 @@
 .hero-wrapper {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .hero-img-wrapper {
@@ -22,7 +22,7 @@
   z-index: 1;
   width: 45%;
   aspect-ratio: 1;
-  background-color: hsla(2, 33%, 48%, 0.716);
+  background-color: hsla(2, 33%, 48%, 0.85);
   backdrop-filter: blur(3px);
   color: hsl(0, 20%, 99%);
   padding: 0rem 0rem 0rem clamp(0.5rem, 0.5rem + 1.6vw, 1rem);

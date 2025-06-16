@@ -1,6 +1,6 @@
 import "./style.css";
 import { home } from "./pages/Home/home.js";
-import { menu } from "./pages/Menu/menu.js";
+// import { menu } from "./pages/Menu/menu.js";
 
 home();
 
@@ -14,6 +14,8 @@ const menuButton = document.querySelector(
 const aboutButton = document.querySelector(
   ".menu-buttons > .list-item:nth-child(3)"
 );
+const specialsButton = document.querySelector(".ad-button");
+specialsButton.addEventListener("click", () => {});
 
 menuButton.addEventListener("click", async () => {
   clearContent();

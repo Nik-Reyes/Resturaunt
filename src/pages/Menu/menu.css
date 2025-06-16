@@ -1,6 +1,14 @@
+.inner-content {
+  padding: 0 2rem;
+  display: grid;
+  gap: 4rem;
+}
+
 .menu-wrapper {
   display: grid;
   gap: 2.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
 .title-text,

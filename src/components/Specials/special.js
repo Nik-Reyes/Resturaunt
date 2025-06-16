@@ -8,7 +8,7 @@ export function createSpecials() {
   const specialsWrapper = utils.generateElement("div", "specials-wrapper");
   const specials = utils.generateElement("div", "specials");
   const specialTitle = utils.generateElement("div", "title-wrapper");
-  const title = utils.generateElement("p", "monthly-title", "Spring Flavors");
+  const title = utils.generateElement("h2", "monthly-title", "Summer Flavors");
   const specialsList = [];
 
   const images = {
