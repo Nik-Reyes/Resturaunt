@@ -1,5 +1,4 @@
 import { utils } from "../../utils/Helpers/helpers.js";
-import signUpImage from "../../assets/images/signUpImage.jpg";
 import "./signUp.css";
 
 export function signup() {
@@ -10,9 +9,6 @@ export function signup() {
     "title-text",
     "Sign up for our tasty newsletter"
   );
-
-  const imageWrapper = utils.generateElement("div", "nl-img-wrapper");
-  const img = utils.generateElement("img", "news-img", signUpImage);
 
   const emailSection = utils.generateElement("div", "email-section");
   const newsletterSubtitle = utils.generateElement("div", "signup-subtitle");
@@ -48,9 +44,8 @@ export function signup() {
   form.appendChild(formControlWrapper);
   newsletterSubtitle.appendChild(newsLetterSubText);
   emailSection.append(newsletterSubtitle, form);
-  imageWrapper.appendChild(img);
   title.appendChild(titleText);
-  signupWrapper.append(title, imageWrapper, emailSection);
+  signupWrapper.append(title, emailSection);
 
   return signupWrapper;
 }
