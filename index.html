@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resturaunt</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <header>
+      <nav class="nav" aria-label="Main Navigation Tabs">
+        <div class="logo-wrapper">
+          <img
+            class="logo"
+            src="assets/images/Logo.png"
+            alt="Samy's pie shop logo"
+            width="500"
+            height="500"
+          />
+        </div>
+        <ul class="menu-buttons">
+          <li class="list-item">
+            <button
+              class="nav-button"
+              aria-pressed="true"
+              aria-controls="content"
+              data-tab="home"
+            >
+              <span>Home</span>
+            </button>
+          </li>
+          <li class="list-item">
+            <button
+              class="nav-button"
+              aria-pressed="false"
+              aria-controls="content"
+              data-tab="Menu"
+            >
+              <span>Menu</span>
+            </button>
+          </li>
+          <li class="list-item">
+            <button
+              class="nav-button"
+              aria-pressed="false"
+              aria-controls="content"
+              data-tab="About"
+            >
+              <span>About</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content" role="tabpanel" aria-live="polite"></div>
+  </body>
+</html>
