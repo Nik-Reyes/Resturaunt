@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: "./src/main.js",
   output: {
     filename: "bundle.js",
@@ -11,10 +10,6 @@ module.exports = {
     assetModuleFilename: (pathData) => {
       return `assets/${pathData.filename.split("/").at(2)}/[name][ext]`;
     },
-  },
-  devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/index.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
